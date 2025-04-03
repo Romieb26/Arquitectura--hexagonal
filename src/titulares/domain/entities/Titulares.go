@@ -5,11 +5,11 @@ type Titular struct {
 	Nombre    string `json:"nombre"`
 	Apellido  string `json:"apellido"`
 	DNI       string `json:"dni"`
-	Telefono  int16  `json:"telefono"`
+	Telefono  int  `json:"telefono"`
 	Direccion string `json:"direccion"`
 }
 
-func NewTitular(id int, nombre, apellido, dni string, telefono int16, direccion string) *Titular {
+func NewTitular(id int, nombre, apellido, dni string, telefono int, direccion string) *Titular {
 	return &Titular{
 		ID:        id,
 		Nombre:    nombre,
@@ -52,11 +52,11 @@ func (t *Titular) SetDNI(dni string) {
 	t.DNI = dni
 }
 
-func (t *Titular) GetTelefono() int16 {
+func (t *Titular) GetTelefono() int {
 	return t.Telefono
 }
 
-func (t *Titular) SetTelefono(telefono int16) {
+func (t *Titular) SetTelefono(telefono int) {
 	t.Telefono = telefono
 }
 

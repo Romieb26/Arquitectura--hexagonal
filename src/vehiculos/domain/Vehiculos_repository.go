@@ -7,5 +7,7 @@ type IVehiculo interface {
 	Update(id int, vehiculo entities.Vehiculo) error
 	Delete(id int) error
 	FindByID(id int) (entities.Vehiculo, error)
+	FindByPlaca(placa string) (*entities.Vehiculo, error) 
 	GetAll() ([]entities.Vehiculo, error)
+
 }
